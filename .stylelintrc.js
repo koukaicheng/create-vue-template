@@ -1,0 +1,61 @@
+module.exports = {
+  root: true,
+  plugins: ['stylelint-order'],
+  customSyntax: 'postcss-html',
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  rules: {
+    'no-empty-source': null,
+    'order/order': ['custom-properties', 'declarations'],
+    'order/properties-order': [
+      'position',
+      'top',
+      'right',
+      'bottom',
+      'left',
+      'z-index',
+      'display',
+      'float',
+      'clear',
+      'overflow',
+      'overflow-x',
+      'overflow-y',
+      'margin',
+      'margin-top',
+      'margin-right',
+      'margin-bottom',
+      'margin-left',
+      'padding',
+      'padding-top',
+      'padding-right',
+      'padding-bottom',
+      'padding-left',
+      'width',
+      'min-width',
+      'max-width',
+      'height',
+      'min-height',
+      'max-height',
+    ],
+  },
+  overrides: [
+    {
+      files: ['*.vue', '**/*.vue', '*.html', '**/*.scss'],
+      extends: ['stylelint-config-recommended', 'stylelint-config-html/vue'],
+      rules: {
+        'selector-pseudo-element-no-unknown': [
+          true,
+          {
+            ignorePseudoElements: ['v-deep'],
+          },
+        ],
+        'selector-pseudo-element-no-unknown': [
+          true,
+          {
+            ignorePseudoElements: ['v-deep', 'v-global', 'v-slotted'],
+          },
+        ],
+      },
+    },
+  ],
+};

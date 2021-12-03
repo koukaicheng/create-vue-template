@@ -1,0 +1,28 @@
+## OS
+.DS_Store
+.idea
+.editorconfig
+package-lock.json
+.npmrc
+
+# Ignored suffix
+*.log
+*.md
+*.svg
+*.png
+*ignore
+*.ico
+
+## Local
+.env.development
+.env.production
+.env.staging
+build
+src/assets
+public
+node_modules
+lib
+
+## Built-files
+.cache
+dist
