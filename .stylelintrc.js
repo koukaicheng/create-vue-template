@@ -1,9 +1,12 @@
 module.exports = {
+  extends: [
+    ,
+    'stylelint-config-standard',
+    'stylelint-config-recommended',
+    'stylelint-config-prettier',
+  ],
   root: true,
   plugins: ['stylelint-order'],
-  customSyntax: 'postcss-html',
-  extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
   rules: {
     'no-empty-source': null,
     'order/order': ['custom-properties', 'declarations'],
@@ -38,10 +41,11 @@ module.exports = {
       'max-height',
     ],
   },
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
   overrides: [
     {
-      files: ['*.vue', '**/*.vue', '*.html', '**/*.scss'],
-      extends: ['stylelint-config-recommended', 'stylelint-config-html/vue'],
+      files: ['*.vue', '**/*.vue', '*.html', '*.scss', '*.css'],
+      extends: ['stylelint-config-html/vue'],
       rules: {
         'selector-pseudo-element-no-unknown': [
           true,
