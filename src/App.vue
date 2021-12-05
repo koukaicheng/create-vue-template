@@ -1,19 +1,15 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue';
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <div class="wrap"></div>
+  <el-button>asdasd</el-button>
+  <el-input v-model="inputVal" />
 </template>
-
+<script setup>
+const inputVal = ref('');
+</script>
 <style lang="scss">
-@import './assets/test.scss';
-
-#app {
+@import './assets/ss.css';
+.wrap {
   position: absolute;
-  width: 20px;
+  width: 500px;
 }
 </style>

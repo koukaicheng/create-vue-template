@@ -1,17 +1,16 @@
 {
   "files.eol": "\n",
-  "volar.tsPlugin": true,
+  "volar.tsPlugin": false,
   "volar.tsPluginStatus": false,
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    // "source.fixAll": true,
+    "source.fixAll": true,
     "addMissingImports": true
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-      // "source.fixAll": true
+      "source.fixAll": true
     }
   },
   "eslint.validate": ["javascript", "javascriptreact", "vue", "typescript", "typescriptreact"],

@@ -5,24 +5,22 @@ module.exports = {
     node: true,
     es2021: true,
   },
+  // VUE模版解析器
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 2020,
+    // TypeScript ESLint 解析器
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-    'prettier',
-  ],
-  plugins: ['vue', '@typescript-eslint', 'prettier', 'simple-import-sort'],
+  extends: ['alloy', 'alloy/vue', 'alloy/typescript'],
+  // plugins: ['@typescript-eslint'],
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',
     defineExpose: 'readonly',
     withDefaults: 'readonly',
+    ref: 'readonly',
   },
   rules: {
     '@typescript-eslint/ban-ts-ignore': 'off',
@@ -36,11 +34,9 @@ module.exports = {
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    // 配合vue/no-multiple-template-root自动引入
+    'vue/no-multiple-template-root': 'off',
     'no-var': 'error',
-    'prettier/prettier': 'off',
-    // 引入排序
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
     // 禁止出现console
     'no-console': 'warn',
     // 禁用debugger
