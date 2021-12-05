@@ -7,7 +7,6 @@
 const inputVal = ref('');
 </script>
 <style lang="scss">
-@import './assets/ss.css';
 .wrap {
   position: absolute;
   width: 500px;
