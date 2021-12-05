@@ -53,6 +53,7 @@
     "unplugin-auto-import": "^0.5.1",
     "unplugin-vue-components": "^0.17.2",
     "vite": "^2.6.4",
+    "vite-plugin-svg-icons": "^1.0.5",
     "vue-tsc": "^0.3.0",
     "yorkie": "^2.0.0"
   }
