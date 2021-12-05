@@ -4,9 +4,10 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    ElButton: typeof import('element-plus/es')['ElButton'];
-    ElInput: typeof import('element-plus/es')['ElInput'];
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    SvgIcon: typeof import('./components/SvgIcon.vue')['default']
   }
 }
 
-export {};
+export { }
