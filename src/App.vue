@@ -1,7 +1,9 @@
 <template>
-  <div class="wrap"></div>
-  <el-button>asdasd</el-button>
-  <el-input v-model="inputVal" />
+  <div class="wrap">
+    <el-button>asdasd</el-button>
+    <el-input v-model="inputVal" />
+    <el-col>1221</el-col>
+  </div>
 </template>
 <script setup>
 const inputVal = ref('');

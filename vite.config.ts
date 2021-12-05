@@ -13,12 +13,12 @@ export default defineConfig({
     Components({
       dts: 'src/components.d.ts',
       resolvers: [ElementPlusResolver()],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      include: [/\.vue$/, /\.vue\?vue/],
     }),
     // 按需自动导入 API
     AutoImport({
       dts: 'src/auto-imports.d.ts',
-      include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/, /\.md$/],
+      include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
       imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],
     }),

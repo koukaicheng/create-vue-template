@@ -40,7 +40,7 @@ module.exports = {
       'max-height',
     ],
   },
-  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts'],
+  ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.svg'],
   overrides: [
     {
       files: ['*.vue', '**/*.vue', '*.html', '*.scss', '*.css'],
