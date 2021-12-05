@@ -20,6 +20,7 @@ module.exports = {
     defineEmits: 'readonly',
     defineExpose: 'readonly',
     withDefaults: 'readonly',
+    defineComponent: 'readonly',
     ref: 'readonly',
     computed: 'readonly',
   },
@@ -38,11 +39,6 @@ module.exports = {
     // 配合vue/no-multiple-template-root自动引入
     'vue/no-multiple-template-root': 'off',
     // 🔧 多行属性之间必须有空行
-    'vue/new-line-between-multi-line-property': [
-      'error',
-      { minLineOfMultilineProperty: 2 }, // 默认最少2条属性
-    ],
-
     'no-var': 'error',
     // 禁止出现console
     'no-console': 'warn',
