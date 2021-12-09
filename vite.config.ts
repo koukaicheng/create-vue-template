@@ -11,13 +11,15 @@ export default defineConfig({
     vue(),
     // 按需组件自动导入
     Components({
-      dts: 'src/components.d.ts',
+      dts: 'types/components.d.ts',
+      // dts: false,
       resolvers: [ElementPlusResolver()],
       include: [/\.vue$/, /\.vue\?vue/],
     }),
     // 按需自动导入 API
     AutoImport({
-      dts: 'src/auto-imports.d.ts',
+      // dts: false,
+      dts: 'types/auto-imports.d.ts',
       include: [/\.[tj]sx?$/, /\.vue$/, /\.vue\?vue/],
       imports: ['vue', 'vue-router'],
       resolvers: [ElementPlusResolver()],

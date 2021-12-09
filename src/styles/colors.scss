@@ -1,0 +1,35 @@
+// 主色调
+// $color-main: #4371f4;
+$color-main: #3b6cff;
+
+// 布局
+$color-navBarBg: #20283f;
+$color-sideBarBg: #20283f;
+$color-appMainBg: #f2f6ff;
+$color-footerBg: $color-main;
+
+// 渐变色
+$color-linearBlue: (
+  start: #93adff,
+  end: #527afe,
+);
+$color-linearPink: (
+  start: #ffb0ab,
+  end: #fc769f,
+);
+$color-linearTurquoise: (
+  start: #6de9e5,
+  end: #55c5e5,
+);
+$color-linearLavender: (
+  start: #f3c0fc,
+  end: #c58bf5,
+);
+$color-linearSkyblue: (
+  start: #aae4fd,
+  end: #63bce9,
+);
+$color-linearDarkorange: (
+  start: #ffccb8,
+  end: #ff9858,
+);

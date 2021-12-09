@@ -8,9 +8,10 @@
 <script setup>
 const inputVal = ref('');
 </script>
+
 <style lang="scss">
 .wrap {
-  position: absolute;
-  width: 500px;
+  position: inherit;
+  width: 90px;
 }
 </style>

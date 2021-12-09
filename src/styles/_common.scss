@@ -1,0 +1,124 @@
+@import './mixins';
+@import './colors';
+
+.page-wrapper {
+  .group {
+    // 紧邻两个group增加30间距
+    & + .group {
+      margin-top: 20px;
+    }
+
+    // group 标题
+    &__title {
+      margin-bottom: 20px;
+      padding-left: 8px;
+      height: 28px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      line-height: 28px;
+    }
+
+    // group 内容区域
+    &__content {
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #f9fbff;
+    }
+
+    // 内容头
+    &__header {
+      position: relative;
+      display: flex;
+      padding-left: 12px;
+      height: 48px;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 2px 0 0 rgb(0 0 0 / 2%);
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      line-height: 48px;
+
+      // 左侧蓝色标签
+      &::before {
+        display: block;
+        overflow: hidden;
+        margin-right: 8px;
+        width: 4px;
+        height: 16px;
+        content: '';
+        border-radius: 3px;
+
+        @include backgroundImage($color-linearBlue);
+      }
+
+      &--blue::before {
+        @include backgroundImage($color-linearBlue);
+      }
+
+      &--pink::before {
+        @include backgroundImage($color-linearPink);
+      }
+
+      &--turquoise::before {
+        @include backgroundImage($color-linearTurquoise);
+      }
+
+      &--lavender::before {
+        @include backgroundImage($color-linearLavender);
+      }
+
+      &--skyblue::before {
+        @include backgroundImage($color-linearSkyblue);
+      }
+
+      &--darkorange::before {
+        @include backgroundImage($color-linearDarkorange);
+      }
+    }
+  }
+
+  .page {
+    &__header {
+      position: relative;
+      margin-bottom: 20px;
+      padding-left: 8px;
+      height: 28px;
+
+      &-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        line-height: 28px;
+      }
+
+      &-button {
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// 面包屑
+.page-breadcrumb {
+  margin-bottom: 11px;
+  margin-left: 9px;
+
+  .el-breadcrumb {
+    .page-breadcrumb__list {
+      font-size: 14px;
+      font-weight: normal;
+      color: #999990;
+    }
+
+    .page-breadcrumb__detail {
+      .el-breadcrumb__inner {
+        color: #666;
+      }
+    }
+  }
+}

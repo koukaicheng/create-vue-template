@@ -1,0 +1,57 @@
+@import './_transition';
+@import './_element-plus';
+@import './_common';
+
+body {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  min-width: 1220px;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Microsoft YaHei', 'PingFangSC-Regular', sans-serif;
+}
+
+html {
+  overflow: auto;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div:focus {
+  outline: none;
+}
+
+label {
+  font-weight: 700;
+}
+
+img {
+  display: block;
+  border: 0 none;
+  width: 100%;
+  height: 100%;
+}

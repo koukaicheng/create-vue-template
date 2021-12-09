@@ -1,13 +1,17 @@
 module.exports = {
-  extends: [
-    'stylelint-config-standard',
-    'stylelint-config-recommended',
-    'stylelint-config-prettier',
-  ],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier'],
   root: true,
   plugins: ['stylelint-order'],
   rules: {
     'no-empty-source': null,
+    'selector-class-pattern': null,
+    'scss/at-mixin-pattern': null,
+    'scss/no-global-function-names': null,
+    'no-invalid-double-slash-comments': null,
+    'scss/dollar-variable-pattern': null,
+    'font-family-name-quotes': null,
+    'scss/at-import-no-partial-leading-underscore': null,
+    'scss/at-extend-no-missing-placeholder': null,
     'order/order': ['custom-properties', 'declarations'],
     'order/properties-order': [
       'position',
@@ -43,8 +47,8 @@ module.exports = {
   ignoreFiles: ['**/*.js', '**/*.jsx', '**/*.tsx', '**/*.ts', '**/*.svg'],
   overrides: [
     {
-      files: ['*.vue', '**/*.vue', '*.html', '*.scss', '*.css'],
-      extends: ['stylelint-config-html/vue'],
+      extends: ['stylelint-config-recommended-vue/scss', 'stylelint-config-html/vue'],
+      files: ['*.vue', '**/*.vue'],
       rules: {
         'selector-pseudo-element-no-unknown': [
           true,

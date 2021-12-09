@@ -1,0 +1,20 @@
+@mixin singleRowEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 多行省略号 默认行数2
+@mixin multipleRowEllipsis($row: 2) {
+  display: box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+}
+
+// 渐变背景色色
+// 默认值215deg主要用于应用管理ICON以及相关标题使用
+@mixin backgroundImage($color, $deg: 215deg) {
+  background-image: linear-gradient($deg, map-get($color, start) 0%, map-get($color, end) 100%);
+}

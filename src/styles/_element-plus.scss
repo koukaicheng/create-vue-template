@@ -1,0 +1,163 @@
+@import './colors';
+
+$--colors: (
+  (
+    'primary': (
+      'base': $color-main,
+    ),
+  )
+);
+
+// 修改默认样式
+.el-form.el-form--inline > .el-form-item {
+  margin-right: 30px;
+  margin-bottom: 14px;
+
+  &:nth-last-of-type(1) {
+    margin-right: 0;
+  }
+
+  .el-form-item__label {
+    line-height: 46px;
+    font-size: 14px;
+    color: #666;
+    font-weight: normal;
+  }
+}
+
+// button
+.el-button {
+  @mixin button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-width: 100px;
+    min-height: 36px;
+    color: #fff;
+    border-radius: 3px;
+  }
+
+  &--default {
+    @include button;
+
+    color: $--color-primary;
+    border-color: $--color-primary;
+  }
+
+  &--primary {
+    @include button;
+  }
+
+  // 文字button 默认存在1px透明border，重置样式
+  &--text {
+    padding: 0;
+    min-height: 18px;
+    border: 0 none;
+  }
+
+  &--mini {
+    min-height: 28px;
+  }
+}
+
+// textarea
+.el-textarea {
+  &__inner {
+    line-height: 20px;
+    padding: 12px;
+    border-radius: 1px;
+    border-color: #f4f4f4;
+    color: #333;
+    font-family: 'Microsoft YaHei', 'PingFangSC-Regular', sans-serif;
+  }
+}
+
+// input
+.el-input {
+  &__inner {
+    @extend .el-textarea__inner;
+
+    height: 46px;
+  }
+
+  &__suffix {
+    line-height: 46px;
+  }
+
+  &__prefix {
+    padding-right: 12px;
+    width: 42px;
+    line-height: 46px;
+    text-align: right;
+  }
+}
+
+// table
+.el-table {
+  &__header-wrapper {
+    position: relative;
+    z-index: 9;
+    box-shadow: 0 2px 0 0 rgb(0 0 0 / 2%);
+  }
+
+  &__body {
+    background-color: #f9fbff;
+
+    .el-table__row:nth-child(odd) {
+      background-color: transparent;
+    }
+
+    .el-table__row:nth-child(even) {
+      background-color: rgb(32 40 63 / 2%);
+    }
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+// date-picker
+.el-date-editor {
+  .el-input {
+    &__inner {
+      padding-right: 50px;
+      padding-left: 12px;
+    }
+
+    &__prefix {
+      right: 5px;
+      left: auto;
+      padding-right: 0;
+    }
+
+    &__suffix {
+      right: 30px;
+    }
+  }
+}
+
+// 进度条
+.el-steps {
+  margin: auto;
+  height: 54px;
+
+  .el-step {
+    .is-finish {
+      color: #65c335;
+      border-color: #65c335;
+    }
+
+    &__line {
+      display: none;
+    }
+
+    &__icon {
+      width: 24px !important;
+      height: 24px !important;
+
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+}
