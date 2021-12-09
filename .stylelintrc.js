@@ -9,6 +9,7 @@ module.exports = {
     'scss/no-global-function-names': null,
     'no-invalid-double-slash-comments': null,
     'scss/dollar-variable-pattern': null,
+    'scss/at-mixin-pattern': null,
     'font-family-name-quotes': null,
     'scss/at-import-no-partial-leading-underscore': null,
     'scss/at-extend-no-missing-placeholder': null,
