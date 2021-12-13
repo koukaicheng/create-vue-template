@@ -14,7 +14,6 @@ module.exports = {
     sourceType: 'module',
   },
   extends: ['alloy', 'alloy/vue', 'alloy/typescript'],
-  // plugins: ['@typescript-eslint'],
   globals: {
     defineProps: 'readonly',
     defineEmits: 'readonly',

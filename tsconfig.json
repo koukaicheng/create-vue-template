@@ -15,7 +15,8 @@
     "types": ["element-plus/global"],
     "allowJs": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "/#/*": ["types/*"]
     }
   },
   "include": [

@@ -1,17 +1,14 @@
 <template>
   <div class="wrap">
-    <el-button>asdasd</el-button>
-    <el-input v-model="inputVal" />
-    <el-col>1221</el-col>
+    <el-button>demo</el-button>
+    <el-input />
+    <svg-icon name="upload" size="19"></svg-icon>
   </div>
 </template>
-<script setup>
-const inputVal = ref('');
-</script>
 
 <style lang="scss">
 .wrap {
-  position: inherit;
-  width: 90px;
+  margin: 50px auto;
+  width: 500px;
 }
 </style>

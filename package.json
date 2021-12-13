@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
+    "type:check": "vue-tsc --noEmit --skipLibCheck",
     "serve": "vite preview",
     "lint:fix": "npm run lint:js && npm run lint:style",
     "lint:js": "eslint --fix --cache --ext .vue,.js,.jsx,.ts,.tsx ./src",
